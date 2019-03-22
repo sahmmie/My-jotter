@@ -1,0 +1,14 @@
+.size{
+    margin: auto;
+    width: 200px;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font: 700;
+}
+
+.logo{
+    width: 60px;
+    margin-right: 2px;
+}

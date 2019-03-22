@@ -1,0 +1,18 @@
+<div class="container">
+    <card class="card-body">
+        <h3 class="text-center">
+            Idea
+        </h3>
+        <form action="/ideas" method="POST">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <input type="text" class="form-control" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="details">Details</label>
+                <textarea type="text" class="form-control" rows="10" name="details" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </card>
+</div>

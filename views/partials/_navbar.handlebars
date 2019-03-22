@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-3">
+    <div class="container">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <img src="/img/logo.png" class="img-fluid rounded logo" alt="">
+        <a class="navbar-brand" href="/">My-Jotter</a>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                {{#if user}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/ideas">Ideas</a>
+                </li>
+                {{/if}}
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                {{#if user}}
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                        id="navbarDropdownMenuLink">Ideas</a>
+                    <div class="dropdown-menu">
+                        <a href="/ideas" class="dropdown-item">Ideas</a>
+                        <a href="/ideas/add" class="dropdown-item">Add Idea</a>
+                    </div>
+                </li>
+                {{!-- new --}}
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown"
+                        id="navbarDropdownMenuLink">Welcome {{user.name}}</a>
+                    <div class="dropdown-menu">
+                        <a href="/users/logout" class="dropdown-item">Logout</a>
+                    </div>
+                </li>
+
+                {{else}}
+                <li class="nav-item">
+                    <a href="/users/login" class="nav-link">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/users/register" class="nav-link">Register</a>
+                </li>
+                {{/if}}
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>

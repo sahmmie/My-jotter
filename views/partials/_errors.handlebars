@@ -1,0 +1,9 @@
+{{#if error}}
+<div class="alert alert-danger text-center" dismissOnTimeout="2000">{{error}}</div>
+{{/if}}
+
+{{#each errors}}
+<div class="alert alert-danger text-center" dismissOnTimeout="2000">{{text}}</div>
+{{else}}
+
+{{/each}}
